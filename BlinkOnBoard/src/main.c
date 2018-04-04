@@ -38,17 +38,20 @@ int main(void)
     // Initialize the button
     button_setup();
 
-  while(1)
-  {
-      if (GPIO_ReadInputDataBit(GPIOB, GPIO_Pin_15))
-      {
+    float duty=0.5;
+
+    while(1)
+    {
+	  	delay_us(1000*duty);
         FM_Led_Toggle(LED_1);
-        FM_Led_Toggle(LED_2);
-      } else {
-        FM_Led_Off(LED_2);
-        FM_Led_Off(LED_1);
-      }
-        // Delay for half second
-       delay_ms(500);
-  }
+        delay_us(1000-1000*duty);
+        FM_Led_Toggle(LED_1);
+
+        duty=duty-0.001;
+
+        if (duty<0.01)
+        {
+        	duty=0.9;
+        }
+    }
 }

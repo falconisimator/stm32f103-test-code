@@ -32,10 +32,10 @@ endif
 all: BlinkOnBoard.elf
 
 # Tool invocations
-BlinkOnBoard.elf: $(OBJS) $(USER_OBJS) /Users/ericfalcon/Documents/workspace/BlinkOnBoard/LinkerScript.ld
+BlinkOnBoard.elf: $(OBJS) $(USER_OBJS) /Users/ericfalcon/Documents/workspace/stm32f103/BlinkOnBoard/LinkerScript.ld
 	@echo 'Building target: $@'
 	@echo 'Invoking: MCU GCC Linker'
-	arm-none-eabi-gcc -mcpu=cortex-m3 -mthumb -mfloat-abi=soft -T"/Users/ericfalcon/Documents/workspace/BlinkOnBoard/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "BlinkOnBoard.elf" @"objects.list" $(USER_OBJS) $(LIBS) -lm
+	arm-none-eabi-gcc -mcpu=cortex-m3 -mthumb -mfloat-abi=soft -T"/Users/ericfalcon/Documents/workspace/stm32f103/BlinkOnBoard/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "BlinkOnBoard.elf" @"objects.list" $(USER_OBJS) $(LIBS) -lm
 	@echo 'Finished building target: $@'
 	@echo ' '
 	$(MAKE) --no-print-directory post-build

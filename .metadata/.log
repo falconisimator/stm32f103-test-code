@@ -1,0 +1,22 @@
+!SESSION 2018-04-04 11:05:55.111 -----------------------------------------------
+eclipse.buildId=4.6.3.M20170301-0400
+java.version=1.8.0_151
+java.vendor=Oracle Corporation
+BootLoader constants: OS=macosx, ARCH=x86_64, WS=cocoa, NL=en_US
+Framework arguments:  -pluginCustomization ../Eclipse/configuration/st_pref.ini -product org.eclipse.epp.package.cpp.product -keyring /Users/ericfalcon/.eclipse_keyring
+Command-line arguments:  -os macosx -ws cocoa -arch x86_64 -pluginCustomization ../Eclipse/configuration/st_pref.ini -product org.eclipse.epp.package.cpp.product -keyring /Users/ericfalcon/.eclipse_keyring
+
+!ENTRY org.eclipse.core.net 1 0 2018-04-04 11:06:18.295
+!MESSAGE System property http.nonProxyHosts has been set to local|*.local|169.254/16|*.169.254/16 by an external source. This value will be overwritten using the values from the preferences
+
+!ENTRY fr.ac6.mcu.ide 1 1 2018-04-04 11:06:24.408
+!MESSAGE Started RMI Server, listening on port 21112
+
+!ENTRY org.eclipse.cdt.core 1 0 2018-04-04 11:08:10.197
+!MESSAGE Indexed 'BlinkOnBoard' (29 sources, 84 headers) in 2.4 sec: 5,976 declarations; 20,336 references; 0 unresolved inclusions; 1 syntax errors; 0 unresolved names (0%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2018-04-04 11:08:11.417
+!MESSAGE Indexed 'PWMtest' (27 sources, 82 headers) in 1.21 sec: 5,940 declarations; 20,312 references; 0 unresolved inclusions; 1 syntax errors; 0 unresolved names (0%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2018-04-04 11:08:12.397
+!MESSAGE Indexed 'HelloWorld' (27 sources, 82 headers) in 0.964 sec: 5,925 declarations; 20,188 references; 0 unresolved inclusions; 1 syntax errors; 0 unresolved names (0%)
