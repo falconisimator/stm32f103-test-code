@@ -1,0 +1,58 @@
+/**
+  ******************************************************************************
+  * @file    main.c
+  * @author  Ac6
+  * @version V1.0
+  * @date    01-December-2013
+  * @brief   Default main function.
+  ******************************************************************************
+*/
+
+
+#include "stm32f10x_conf.h"
+#include "rf_stm32f1_led.h"
+#include "rf_stm32f1_delay.h"
+
+static void button_setup(void)
+{
+    GPIO_InitTypeDef  GPIO_InitStructure;
+
+	// Clock Enable
+    RCC_APB2PeriphClockCmd(RCC_APB2Periph_GPIOB, ENABLE);
+
+    // Configure as digital input
+    GPIO_InitStructure.GPIO_Pin = GPIO_Pin_15;
+    GPIO_InitStructure.GPIO_Mode = GPIO_Mode_IN_FLOATING;
+    GPIO_InitStructure.GPIO_Speed = GPIO_Speed_2MHz;
+    GPIO_Init(GPIOB, &GPIO_InitStructure);
+}
+
+int main(void)
+{
+    // initialize the system frequency
+    SystemInit();
+    // Delay initialize
+    delay_init();
+    // all LED initialize
+    FM_Led_Init();
+    // Initialize the button
+    button_setup();
+
+    float duty=0.5;
+    float step=0.001;
+
+    while(1)
+    {
+	  	delay_us(1000*duty);
+        FM_Led_Toggle(LED_1);
+        delay_us(1000-1000*duty);
+        FM_Led_Toggle(LED_1);
+
+        duty=duty-step;
+
+        if (duty<0.01||duty>0.99)
+        {
+        	step=-step;
+        }
+    }
+}

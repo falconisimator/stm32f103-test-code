@@ -20,3 +20,9 @@ Command-line arguments:  -os macosx -ws cocoa -arch x86_64 -pluginCustomization 
 
 !ENTRY org.eclipse.cdt.core 1 0 2018-04-04 11:08:12.397
 !MESSAGE Indexed 'HelloWorld' (27 sources, 82 headers) in 0.964 sec: 5,925 declarations; 20,188 references; 0 unresolved inclusions; 1 syntax errors; 0 unresolved names (0%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2018-04-04 11:39:26.693
+!MESSAGE Indexed '3phasePWM' (1 sources, 33 headers) in 0.146 sec: 1,056 declarations; 1,872 references; 0 unresolved inclusions; 0 syntax errors; 0 unresolved names (0%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2018-04-04 11:40:52.907
+!MESSAGE Indexed '3phasePWM' (27 sources, 82 headers) in 0.934 sec: 5,924 declarations; 20,110 references; 0 unresolved inclusions; 1 syntax errors; 0 unresolved names (0%)
