@@ -1,6 +1,23 @@
-11:28:21 **** Incremental Build of configuration Debug for project BlinkOnBoard ****
+11:30:30 **** Incremental Build of configuration Debug for project BlinkOnBoard ****
 make -j7 all 
-make: Nothing to be done for `all'.
+Building file: ../src/main.c
+Invoking: MCU GCC Compiler
+/Users/ericfalcon/Documents/workspace/stm32f103/BlinkOnBoard/Debug
+arm-none-eabi-gcc -mcpu=cortex-m3 -mthumb -mfloat-abi=soft -DSTM32 -DSTM32F1 -DSTM32F103RBTx -DNUCLEO_F103RB -DDEBUG -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER -I"/Users/ericfalcon/Documents/workspace/stm32f103/BlinkOnBoard/Utilities/STM32F1xx-Nucleo" -I"/Users/ericfalcon/Documents/workspace/stm32f103/BlinkOnBoard/StdPeriph_Driver/inc" -I"/Users/ericfalcon/Documents/workspace/stm32f103/BlinkOnBoard/inc" -I"/Users/ericfalcon/Documents/workspace/stm32f103/BlinkOnBoard/CMSIS/device" -I"/Users/ericfalcon/Documents/workspace/stm32f103/BlinkOnBoard/CMSIS/core" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+Finished building: ../src/main.c
+ 
+Building target: BlinkOnBoard.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m3 -mthumb -mfloat-abi=soft -T"/Users/ericfalcon/Documents/workspace/stm32f103/BlinkOnBoard/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "BlinkOnBoard.elf" @"objects.list"   -lm
+Finished building target: BlinkOnBoard.elf
+ 
+/Library/Developer/CommandLineTools/usr/bin/make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "BlinkOnBoard.elf" "BlinkOnBoard.bin"
+arm-none-eabi-size "BlinkOnBoard.elf"
+   text	   data	    bss	    dec	    hex	filename
+   4684	   1144	    324	   6152	   1808	BlinkOnBoard.elf
+ 
 
-11:28:21 Build Finished (took 139ms)
+11:30:30 Build Finished (took 402ms)
 
