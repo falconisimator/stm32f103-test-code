@@ -5,16 +5,19 @@
 # Add inputs and outputs from these tool invocations to the build variables 
 C_SRCS += \
 ../src/main.c \
+../src/sincos.c \
 ../src/syscalls.c \
 ../src/system_stm32f10x.c 
 
 OBJS += \
 ./src/main.o \
+./src/sincos.o \
 ./src/syscalls.o \
 ./src/system_stm32f10x.o 
 
 C_DEPS += \
 ./src/main.d \
+./src/sincos.d \
 ./src/syscalls.d \
 ./src/system_stm32f10x.d 
 

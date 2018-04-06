@@ -1,0 +1,8 @@
+
+
+#include "sincos.h"
+
+float sin(float angle);
+{
+	return angle;
+}

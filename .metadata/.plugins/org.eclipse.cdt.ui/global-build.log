@@ -1,9 +1,16 @@
-11:41:29 **** Incremental Build of configuration Debug for project 3phasePWM ****
+10:51:49 **** Incremental Build of configuration Debug for project 3phasePWM ****
 make -j7 all 
 Building file: ../src/main.c
 Invoking: MCU GCC Compiler
 /Users/ericfalcon/Documents/workspace/stm32f103/3phasePWM/Debug
 arm-none-eabi-gcc -mcpu=cortex-m3 -mthumb -mfloat-abi=soft -DSTM32 -DSTM32F1 -DSTM32F103RBTx -DNUCLEO_F103RB -DDEBUG -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER -I"/Users/ericfalcon/Documents/workspace/stm32f103/3phasePWM/Utilities/STM32F1xx-Nucleo" -I"/Users/ericfalcon/Documents/workspace/stm32f103/3phasePWM/StdPeriph_Driver/inc" -I"/Users/ericfalcon/Documents/workspace/stm32f103/3phasePWM/inc" -I"/Users/ericfalcon/Documents/workspace/stm32f103/3phasePWM/CMSIS/device" -I"/Users/ericfalcon/Documents/workspace/stm32f103/3phasePWM/CMSIS/core" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+In file included from ../src/main.c:3:0:
+../src/sincos.h:11:5: warning: conflicting types for built-in function 'sinl'
+ s16 sinl(float);
+     ^~~~
+../src/sincos.h:12:5: warning: conflicting types for built-in function 'cosl'
+ s16 cosl(float);
+     ^~~~
 Finished building: ../src/main.c
  
 Building target: 3phasePWM.elf
@@ -16,5 +23,8 @@ Generating binary and Printing size information:
 arm-none-eabi-objcopy -O binary "3phasePWM.elf" "3phasePWM.bin"
 arm-none-eabi-size "3phasePWM.elf"
    text	   data	    bss	    dec	    hex	filename
-   5372	   1080	    372	   6824	   1aa8	3phasePWM.elf
+  10784	   1080	    372	  12236	   2fcc	3phasePWM.elf
  
+10:55:19 **** Incremental Build of configuration Debug for project 3phasePWM ****
+make -j7 all 
+make: Nothing to be done for `all'.

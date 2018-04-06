@@ -27,6 +27,8 @@ src/main.o: ../src/main.c \
  /Users/ericfalcon/Documents/workspace/stm32f103/3phasePWM/StdPeriph_Driver/inc/stm32f10x_tim.h \
  /Users/ericfalcon/Documents/workspace/stm32f103/3phasePWM/StdPeriph_Driver/inc/stm32f10x_usart.h \
  /Users/ericfalcon/Documents/workspace/stm32f103/3phasePWM/StdPeriph_Driver/inc/stm32f10x_wwdg.h \
+ /Users/ericfalcon/Documents/workspace/stm32f103/3phasePWM/StdPeriph_Driver/inc/misc.h \
+ ../src/sincos.h \
  /Users/ericfalcon/Documents/workspace/stm32f103/3phasePWM/StdPeriph_Driver/inc/misc.h
 
 /Users/ericfalcon/Documents/workspace/stm32f103/3phasePWM/CMSIS/device/stm32f10x.h:
@@ -84,5 +86,9 @@ src/main.o: ../src/main.c \
 /Users/ericfalcon/Documents/workspace/stm32f103/3phasePWM/StdPeriph_Driver/inc/stm32f10x_usart.h:
 
 /Users/ericfalcon/Documents/workspace/stm32f103/3phasePWM/StdPeriph_Driver/inc/stm32f10x_wwdg.h:
+
+/Users/ericfalcon/Documents/workspace/stm32f103/3phasePWM/StdPeriph_Driver/inc/misc.h:
+
+../src/sincos.h:
 
 /Users/ericfalcon/Documents/workspace/stm32f103/3phasePWM/StdPeriph_Driver/inc/misc.h:

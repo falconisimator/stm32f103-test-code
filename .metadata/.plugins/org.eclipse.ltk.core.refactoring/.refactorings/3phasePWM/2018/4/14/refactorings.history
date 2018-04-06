@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;3phasePWM/src/sincos&apos; to &apos;sincos.c&apos;" description="Rename resource &apos;sincos&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="src/sincos" name="sincos.c" stamp="1522911394344" updateReferences="true"/>
+</session>

@@ -1,5 +1,6 @@
 
 #include "stm32f10x.h"
+#include "sincos.h"
 
 int i=0;
 
@@ -32,6 +33,8 @@ const u16 PWMdata[256]={
 2182,2251,2321,2391,2461,2531,2601,2672,2742,2813,
 2884,2954,3025,3095,3165,3235,
 };
+
+
 TIM_TimeBaseInitTypeDef TIM_TimeBaseStructure;
 TIM_OCInitTypeDef TIM_OCInitStructure;
 GPIO_InitTypeDef GPIO_InitStructure;
@@ -47,93 +50,93 @@ void NVIC_Configuration(void);
 
 int main(void)
 {
-//#ifdef DEBUG
-//	debug();
-//#endif
-/* System Clocks Configuration */
-RCC_Configuration();
+	//#ifdef DEBUG
+	//	debug();
+	//#endif
+	/* System Clocks Configuration */
+	RCC_Configuration();
 
-/* NVIC configuration */
-NVIC_Configuration();
+	/* NVIC configuration */
+	NVIC_Configuration();
 
-/* GPIO Configuration */
-GPIO_Configuration();
+	/* GPIO Configuration */
+	GPIO_Configuration();
 
-/* TIM1 Configuration ---------------------------------------------------
-Generates 6 complemantary PWM signals with 4 sinusoidal data duty cycles:
-TIM1CLK = 72 MHz, Prescaler = 0, TIM1 counter clock = 72 MHz
-TIM1 frequency = TIM1CLK/(TIM1_Period + 1) =
-Time Base configuration */
+	/* TIM1 Configuration ---------------------------------------------------
+	Generates 6 complemantary PWM signals with 4 sinusoidal data duty cycles:
+	TIM1CLK = 72 MHz, Prescaler = 0, TIM1 counter clock = 72 MHz
+	TIM1 frequency = TIM1CLK/(TIM1_Period + 1) =
+	Time Base configuration */
 
-/* TIM1 Peripheral Configuration ----------------------------------------*/
-/* Time Base configuration */
-TIM_TimeBaseStructure.TIM_Prescaler = 0;
-TIM_TimeBaseStructure.TIM_CounterMode = TIM_CounterMode_Up;
-TIM_TimeBaseStructure.TIM_Period = 5625-1;
-TIM_TimeBaseStructure.TIM_ClockDivision = 0;
-TIM_TimeBaseStructure.TIM_RepetitionCounter = 0;
+	/* TIM1 Peripheral Configuration ----------------------------------------*/
+	/* Time Base configuration */
+	TIM_TimeBaseStructure.TIM_Prescaler = 0;
+	TIM_TimeBaseStructure.TIM_CounterMode = TIM_CounterMode_Up;
+	TIM_TimeBaseStructure.TIM_Period = .5*5625-1;
+	TIM_TimeBaseStructure.TIM_ClockDivision = 0;
+	TIM_TimeBaseStructure.TIM_RepetitionCounter = 0;
 
-TIM_TimeBaseInit(TIM1, &TIM_TimeBaseStructure);
+	TIM_TimeBaseInit(TIM1, &TIM_TimeBaseStructure);
 
-/* Channel 3 Configuration in PWM mode */
-TIM_OCInitStructure.TIM_OCMode = TIM_OCMode_PWM2;
-TIM_OCInitStructure.TIM_OutputState = TIM_OutputState_Enable;
-TIM_OCInitStructure.TIM_OutputNState = TIM_OutputNState_Enable;
-TIM_OCInitStructure.TIM_Pulse = PWMdata[0];//127;
-TIM_OCInitStructure.TIM_OCPolarity = TIM_OCPolarity_High;
-TIM_OCInitStructure.TIM_OCNPolarity = TIM_OCNPolarity_High;
-TIM_OCInitStructure.TIM_OCIdleState = TIM_OCIdleState_Set;
-TIM_OCInitStructure.TIM_OCNIdleState = TIM_OCIdleState_Reset;
+	/* Channel 3 Configuration in PWM mode */
+	TIM_OCInitStructure.TIM_OCMode = TIM_OCMode_PWM2;
+	TIM_OCInitStructure.TIM_OutputState = TIM_OutputState_Enable;
+	TIM_OCInitStructure.TIM_OutputNState = TIM_OutputNState_Enable;
+	TIM_OCInitStructure.TIM_Pulse = sinl(0);//127;
+	TIM_OCInitStructure.TIM_OCPolarity = TIM_OCPolarity_High;
+	TIM_OCInitStructure.TIM_OCNPolarity = TIM_OCNPolarity_High;
+	TIM_OCInitStructure.TIM_OCIdleState = TIM_OCIdleState_Set;
+	TIM_OCInitStructure.TIM_OCNIdleState = TIM_OCIdleState_Reset;
 
-TIM_OC3Init(TIM1, &TIM_OCInitStructure);
+	TIM_OC3Init(TIM1, &TIM_OCInitStructure);
 
-/* Channel 2 Configuration in PWM mode */
-TIM_OCInitStructure.TIM_OCMode = TIM_OCMode_PWM2;
-TIM_OCInitStructure.TIM_OutputState = TIM_OutputState_Enable;
-TIM_OCInitStructure.TIM_OutputNState = TIM_OutputNState_Enable;
-TIM_OCInitStructure.TIM_Pulse = PWMdata[0];//127;
-TIM_OCInitStructure.TIM_OCPolarity = TIM_OCPolarity_High;
-TIM_OCInitStructure.TIM_OCNPolarity = TIM_OCNPolarity_High;
-TIM_OCInitStructure.TIM_OCIdleState = TIM_OCIdleState_Set;
-TIM_OCInitStructure.TIM_OCNIdleState = TIM_OCIdleState_Reset;
+	/* Channel 2 Configuration in PWM mode */
+	TIM_OCInitStructure.TIM_OCMode = TIM_OCMode_PWM2;
+	TIM_OCInitStructure.TIM_OutputState = TIM_OutputState_Enable;
+	TIM_OCInitStructure.TIM_OutputNState = TIM_OutputNState_Enable;
+	TIM_OCInitStructure.TIM_Pulse = sinl(0);//127;
+	TIM_OCInitStructure.TIM_OCPolarity = TIM_OCPolarity_High;
+	TIM_OCInitStructure.TIM_OCNPolarity = TIM_OCNPolarity_High;
+	TIM_OCInitStructure.TIM_OCIdleState = TIM_OCIdleState_Set;
+	TIM_OCInitStructure.TIM_OCNIdleState = TIM_OCIdleState_Reset;
 
-TIM_OC2Init(TIM1, &TIM_OCInitStructure);
+	TIM_OC2Init(TIM1, &TIM_OCInitStructure);
 
-/* Channel 1 Configuration in PWM mode */
-TIM_OCInitStructure.TIM_OCMode = TIM_OCMode_PWM2;
-TIM_OCInitStructure.TIM_OutputState = TIM_OutputState_Enable;
-TIM_OCInitStructure.TIM_OutputNState = TIM_OutputNState_Enable;
-TIM_OCInitStructure.TIM_Pulse = PWMdata[5];//127;
-TIM_OCInitStructure.TIM_OCPolarity = TIM_OCPolarity_High;
-TIM_OCInitStructure.TIM_OCNPolarity = TIM_OCNPolarity_High;
-TIM_OCInitStructure.TIM_OCIdleState = TIM_OCIdleState_Set;
-TIM_OCInitStructure.TIM_OCNIdleState = TIM_OCIdleState_Reset;
+	/* Channel 1 Configuration in PWM mode */
+	TIM_OCInitStructure.TIM_OCMode = TIM_OCMode_PWM2;
+	TIM_OCInitStructure.TIM_OutputState = TIM_OutputState_Enable;
+	TIM_OCInitStructure.TIM_OutputNState = TIM_OutputNState_Enable;
+	TIM_OCInitStructure.TIM_Pulse = sinl(5);//127;
+	TIM_OCInitStructure.TIM_OCPolarity = TIM_OCPolarity_High;
+	TIM_OCInitStructure.TIM_OCNPolarity = TIM_OCNPolarity_High;
+	TIM_OCInitStructure.TIM_OCIdleState = TIM_OCIdleState_Set;
+	TIM_OCInitStructure.TIM_OCNIdleState = TIM_OCIdleState_Reset;
 
-TIM_OC1Init(TIM1, &TIM_OCInitStructure);
+	TIM_OC1Init(TIM1, &TIM_OCInitStructure);
 
-/* Automatic Output enable, Break, dead time and lock configuration*/
-TIM_BDTRInitStructure.TIM_OSSRState = TIM_OSSRState_Enable;
-TIM_BDTRInitStructure.TIM_OSSIState = TIM_OSSIState_Enable;
-TIM_BDTRInitStructure.TIM_LOCKLevel = TIM_LOCKLevel_1;
-TIM_BDTRInitStructure.TIM_DeadTime = 5;
-TIM_BDTRInitStructure.TIM_Break = TIM_Break_Disable;
-TIM_BDTRInitStructure.TIM_BreakPolarity = TIM_BreakPolarity_High;
-TIM_BDTRInitStructure.TIM_AutomaticOutput = TIM_AutomaticOutput_Disable;
+	/* Automatic Output enable, Break, dead time and lock configuration*/
+	TIM_BDTRInitStructure.TIM_OSSRState = TIM_OSSRState_Enable;
+	TIM_BDTRInitStructure.TIM_OSSIState = TIM_OSSIState_Enable;
+	TIM_BDTRInitStructure.TIM_LOCKLevel = TIM_LOCKLevel_1;
+	TIM_BDTRInitStructure.TIM_DeadTime = 5;
+	TIM_BDTRInitStructure.TIM_Break = TIM_Break_Disable;
+	TIM_BDTRInitStructure.TIM_BreakPolarity = TIM_BreakPolarity_High;
+	TIM_BDTRInitStructure.TIM_AutomaticOutput = TIM_AutomaticOutput_Disable;
 
-TIM_BDTRConfig(TIM1, &TIM_BDTRInitStructure);
-/* TIM1 counter enable */
-//clear tim1 interrupt flag
-TIM_ClearFlag(TIM1, TIM_FLAG_CC1);
-//TIM1 interrupt source
-TIM_ITConfig(TIM1, TIM_IT_CC1, ENABLE);
-TIM_Cmd(TIM1, ENABLE);
+	TIM_BDTRConfig(TIM1, &TIM_BDTRInitStructure);
+	/* TIM1 counter enable */
+	//clear tim1 interrupt flag
+	TIM_ClearFlag(TIM1, TIM_FLAG_CC1);
+	//TIM1 interrupt source
+	TIM_ITConfig(TIM1, TIM_IT_CC1, ENABLE);
+	TIM_Cmd(TIM1, ENABLE);
 
-/* Main Output Enable */
-TIM_CtrlPWMOutputs(TIM1, ENABLE);
-while (1)
-{
+	/* Main Output Enable */
+	TIM_CtrlPWMOutputs(TIM1, ENABLE);
+	while (1)
+	{
 
-}
+	}
 }
 
 /*******************************************************************************
@@ -145,57 +148,55 @@ while (1)
 *******************************************************************************/
 void RCC_Configuration(void)
 {
-/* RCC system reset(for debug purpose) */
-RCC_DeInit();
+	/* RCC system reset(for debug purpose) */
+	RCC_DeInit();
 
-/* Enable HSE */
-RCC_HSEConfig(RCC_HSE_ON);
+	/* Enable HSE */
+	RCC_HSEConfig(RCC_HSE_ON);
 
-/* Wait till HSE is ready */
-HSEStartUpStatus = RCC_WaitForHSEStartUp();
+	/* Wait till HSE is ready */
+	HSEStartUpStatus = RCC_WaitForHSEStartUp();
 
-if (HSEStartUpStatus == SUCCESS)
-{
-/* Enable Prefetch Buffer */
-FLASH_PrefetchBufferCmd(FLASH_PrefetchBuffer_Enable);
+	if (HSEStartUpStatus == SUCCESS)
+	{
+		/* Enable Prefetch Buffer */
+		FLASH_PrefetchBufferCmd(FLASH_PrefetchBuffer_Enable);
 
-/* Flash 2 wait state */
-FLASH_SetLatency(FLASH_Latency_2);
+		/* Flash 2 wait state */
+		FLASH_SetLatency(FLASH_Latency_2);
 
-/* HCLK = SYSCLK */
-RCC_HCLKConfig(RCC_SYSCLK_Div1);
+		/* HCLK = SYSCLK */
+		RCC_HCLKConfig(RCC_SYSCLK_Div1);
 
-/* PCLK2 = HCLK */
-RCC_PCLK2Config(RCC_HCLK_Div1);
+		/* PCLK2 = HCLK */
+		RCC_PCLK2Config(RCC_HCLK_Div1);
 
-/* PCLK1 = HCLK/2 */
-RCC_PCLK1Config(RCC_HCLK_Div2);
+		/* PCLK1 = HCLK/2 */
+		RCC_PCLK1Config(RCC_HCLK_Div2);
 
-/* ADCCLK = PCLK2/4 */
-RCC_ADCCLKConfig(RCC_PCLK2_Div6);
+		/* ADCCLK = PCLK2/4 */
+		RCC_ADCCLKConfig(RCC_PCLK2_Div6);
 
-/* PLLCLK = 8MHz * 9 = 72 MHz */
-RCC_PLLConfig(RCC_PLLSource_HSE_Div1, RCC_PLLMul_9);
+		/* PLLCLK = 8MHz * 9 = 72 MHz */
+		RCC_PLLConfig(RCC_PLLSource_HSE_Div1, RCC_PLLMul_9);
 
-/* Enable PLL */
-RCC_PLLCmd(ENABLE);
+		/* Enable PLL */
+		RCC_PLLCmd(ENABLE);
 
-/* Wait till PLL is ready */
-while (RCC_GetFlagStatus(RCC_FLAG_PLLRDY) == RESET)
-{}
+		/* Wait till PLL is ready */
+		while (RCC_GetFlagStatus(RCC_FLAG_PLLRDY) == RESET){}
 
-/* Select PLL as system clock source */
-RCC_SYSCLKConfig(RCC_SYSCLKSource_PLLCLK);
+		/* Select PLL as system clock source */
+		RCC_SYSCLKConfig(RCC_SYSCLKSource_PLLCLK);
 
-/* Wait till PLL is used as system clock source */
-while (RCC_GetSYSCLKSource() != 0x08)
-{}
-}
+		/* Wait till PLL is used as system clock source */
+		while (RCC_GetSYSCLKSource() != 0x08){}
+	}
 
-/* TIM1, GPIOA and GPIOB clock enable */
-RCC_APB2PeriphClockCmd(RCC_APB2Periph_TIM1 | RCC_APB2Periph_GPIOA |
-RCC_APB2Periph_GPIOB|
-RCC_APB2Periph_GPIOC|RCC_APB2Periph_GPIOD, ENABLE);
+	/* TIM1, GPIOA and GPIOB clock enable */
+	RCC_APB2PeriphClockCmd(RCC_APB2Periph_TIM1 | RCC_APB2Periph_GPIOA |
+	RCC_APB2Periph_GPIOB|
+	RCC_APB2Periph_GPIOC|RCC_APB2Periph_GPIOD, ENABLE);
 }
 /*******************************************************************************
 * Function Name : GPIO_Configuration
@@ -206,25 +207,25 @@ RCC_APB2Periph_GPIOC|RCC_APB2Periph_GPIOD, ENABLE);
 *******************************************************************************/
 void GPIO_Configuration(void)
 {
-GPIO_InitTypeDef GPIO_InitStructure;
+	GPIO_InitTypeDef GPIO_InitStructure;
 
-/* GPIOA Configuration: Channel 1, 2, 3 and 4 as alternate function push-pull */
-GPIO_InitStructure.GPIO_Pin = GPIO_Pin_8 | GPIO_Pin_9 | GPIO_Pin_10 | GPIO_Pin_11;
-GPIO_InitStructure.GPIO_Mode = GPIO_Mode_AF_PP;
-GPIO_InitStructure.GPIO_Speed = GPIO_Speed_50MHz;
+	/* GPIOA Configuration: Channel 1, 2, 3 and 4 as alternate function push-pull */
+	GPIO_InitStructure.GPIO_Pin = GPIO_Pin_8 | GPIO_Pin_9 | GPIO_Pin_10 | GPIO_Pin_11;
+	GPIO_InitStructure.GPIO_Mode = GPIO_Mode_AF_PP;
+	GPIO_InitStructure.GPIO_Speed = GPIO_Speed_50MHz;
 
-GPIO_Init(GPIOA, &GPIO_InitStructure);
+	GPIO_Init(GPIOA, &GPIO_InitStructure);
 
-/* GPIOB Configuration: Channel 1N, 2N and 3N as alternate function push-pull */
-GPIO_InitStructure.GPIO_Pin = GPIO_Pin_13 | GPIO_Pin_14 | GPIO_Pin_15;
-GPIO_InitStructure.GPIO_Mode = GPIO_Mode_AF_PP;
-GPIO_InitStructure.GPIO_Speed = GPIO_Speed_50MHz;
-GPIO_Init(GPIOB, &GPIO_InitStructure);
+	/* GPIOB Configuration: Channel 1N, 2N and 3N as alternate function push-pull */
+	GPIO_InitStructure.GPIO_Pin = GPIO_Pin_13 | GPIO_Pin_14 | GPIO_Pin_15;
+	GPIO_InitStructure.GPIO_Mode = GPIO_Mode_AF_PP;
+	GPIO_InitStructure.GPIO_Speed = GPIO_Speed_50MHz;
+	GPIO_Init(GPIOB, &GPIO_InitStructure);
 
-GPIO_InitStructure.GPIO_Pin = GPIO_Pin_8 | GPIO_Pin_9 | GPIO_Pin_6 | GPIO_Pin_7;
-GPIO_InitStructure.GPIO_Mode = GPIO_Mode_Out_PP;
-GPIO_InitStructure.GPIO_Speed = GPIO_Speed_50MHz;
-GPIO_Init(GPIOC, &GPIO_InitStructure);
+	GPIO_InitStructure.GPIO_Pin = GPIO_Pin_8 | GPIO_Pin_9 | GPIO_Pin_6 | GPIO_Pin_7;
+	GPIO_InitStructure.GPIO_Mode = GPIO_Mode_Out_PP;
+	GPIO_InitStructure.GPIO_Speed = GPIO_Speed_50MHz;
+	GPIO_Init(GPIOC, &GPIO_InitStructure);
 }
 
 /*******************************************************************************
@@ -236,25 +237,27 @@ GPIO_Init(GPIOC, &GPIO_InitStructure);
 *******************************************************************************/
 void NVIC_Configuration(void)
 {
-NVIC_InitTypeDef NVIC_InitStructure;
+	NVIC_InitTypeDef NVIC_InitStructure;
 
-#ifdef VECT_TAB_RAM
-/* Set the Vector Table base location at 0x20000000 */
-NVIC_SetVectorTable(NVIC_VectTab_RAM, 0x0);
-#else /* VECT_TAB_FLASH */
-/* Set the Vector Table base location at 0x08000000 */
-NVIC_SetVectorTable(NVIC_VectTab_FLASH, 0x0);
-#endif
+	#ifdef VECT_TAB_RAM
+	/* Set the Vector Table base location at 0x20000000 */
+	NVIC_SetVectorTable(NVIC_VectTab_RAM, 0x0);
+	#else /* VECT_TAB_FLASH */
+	/* Set the Vector Table base location at 0x08000000 */
+	NVIC_SetVectorTable(NVIC_VectTab_FLASH, 0x0);
+	#endif
 
-NVIC_PriorityGroupConfig(NVIC_PriorityGroup_2);
+	NVIC_PriorityGroupConfig(NVIC_PriorityGroup_2);
 
-NVIC_InitStructure.NVIC_IRQChannel = TIM1_CC_IRQn;
-//NVIC_InitStructure.NVIC_IRQChannelPreemptionPriority = 1;
-NVIC_InitStructure.NVIC_IRQChannelPreemptionPriority = 2;
-NVIC_InitStructure.NVIC_IRQChannelSubPriority = 1;
-NVIC_InitStructure.NVIC_IRQChannelCmd = ENABLE;
-NVIC_Init(&NVIC_InitStructure);
+	NVIC_InitStructure.NVIC_IRQChannel = TIM1_CC_IRQn;
+	//NVIC_InitStructure.NVIC_IRQChannelPreemptionPriority = 1;
+	NVIC_InitStructure.NVIC_IRQChannelPreemptionPriority = 2;
+	NVIC_InitStructure.NVIC_IRQChannelSubPriority = 1;
+	NVIC_InitStructure.NVIC_IRQChannelCmd = ENABLE;
+	NVIC_Init(&NVIC_InitStructure);
 }
+
+
 #ifdef DEBUG
 /*******************************************************************************
 * Function Name : assert_failed
@@ -267,11 +270,11 @@ NVIC_Init(&NVIC_InitStructure);
 *******************************************************************************/
 void assert_failed(u8* file, u32 line)
 {
-/* User can add his own implementation to report the file name and line number,
-ex: printf("Wrong parameters value: file %s on line %d\r\n", file, line) */
+	/* User can add his own implementation to report the file name and line number,
+	ex: printf("Wrong parameters value: file %s on line %d\r\n", file, line) */
 
-while (1)
-{}
+	while (1)
+	{}
 }
 #endif
 
@@ -279,16 +282,16 @@ while (1)
 
 void TIM1_CC_IRQHandler(void)
 {
-i++;
-TIM_OCInitStructure.TIM_Pulse = PWMdata[i];
-TIM_OC1Init(TIM1, &TIM_OCInitStructure);
-TIM_OC2Init(TIM1, &TIM_OCInitStructure);
-TIM_OC3Init(TIM1, &TIM_OCInitStructure);
+	i++;
+	TIM_OCInitStructure.TIM_Pulse = .5*PWMdata[i];
+	TIM_OC1Init(TIM1, &TIM_OCInitStructure);
+	TIM_OC2Init(TIM1, &TIM_OCInitStructure);
+	TIM_OC3Init(TIM1, &TIM_OCInitStructure);
 
-/* check if array's index reaches the max: 255 */
-if (i == 255)
-{
-i = 0;
-}
-TIM_ClearFlag(TIM1,TIM_FLAG_CC1);
+	/* check if array's index reaches the max: 255 */
+	if (i == 255)
+	{
+		i = 0;
+	}
+	TIM_ClearFlag(TIM1,TIM_FLAG_CC1);
 }

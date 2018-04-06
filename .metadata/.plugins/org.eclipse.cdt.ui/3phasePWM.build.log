@@ -1,23 +1,6 @@
-11:41:29 **** Incremental Build of configuration Debug for project 3phasePWM ****
+10:55:19 **** Incremental Build of configuration Debug for project 3phasePWM ****
 make -j7 all 
-Building file: ../src/main.c
-Invoking: MCU GCC Compiler
-/Users/ericfalcon/Documents/workspace/stm32f103/3phasePWM/Debug
-arm-none-eabi-gcc -mcpu=cortex-m3 -mthumb -mfloat-abi=soft -DSTM32 -DSTM32F1 -DSTM32F103RBTx -DNUCLEO_F103RB -DDEBUG -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER -I"/Users/ericfalcon/Documents/workspace/stm32f103/3phasePWM/Utilities/STM32F1xx-Nucleo" -I"/Users/ericfalcon/Documents/workspace/stm32f103/3phasePWM/StdPeriph_Driver/inc" -I"/Users/ericfalcon/Documents/workspace/stm32f103/3phasePWM/inc" -I"/Users/ericfalcon/Documents/workspace/stm32f103/3phasePWM/CMSIS/device" -I"/Users/ericfalcon/Documents/workspace/stm32f103/3phasePWM/CMSIS/core" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
-Finished building: ../src/main.c
- 
-Building target: 3phasePWM.elf
-Invoking: MCU GCC Linker
-arm-none-eabi-gcc -mcpu=cortex-m3 -mthumb -mfloat-abi=soft -T"/Users/ericfalcon/Documents/workspace/stm32f103/3phasePWM/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "3phasePWM.elf" @"objects.list"   -lm
-Finished building target: 3phasePWM.elf
- 
-/Library/Developer/CommandLineTools/usr/bin/make --no-print-directory post-build
-Generating binary and Printing size information:
-arm-none-eabi-objcopy -O binary "3phasePWM.elf" "3phasePWM.bin"
-arm-none-eabi-size "3phasePWM.elf"
-   text	   data	    bss	    dec	    hex	filename
-   5372	   1080	    372	   6824	   1aa8	3phasePWM.elf
- 
+make: Nothing to be done for `all'.
 
-11:41:29 Build Finished (took 407ms)
+10:55:19 Build Finished (took 148ms)
 
