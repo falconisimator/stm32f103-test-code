@@ -1,0 +1,6 @@
+10:19:23 **** Incremental Build of configuration Debug for project Sinetest ****
+make -j7 all 
+make: Nothing to be done for `all'.
+
+10:19:23 Build Finished (took 169ms)
+

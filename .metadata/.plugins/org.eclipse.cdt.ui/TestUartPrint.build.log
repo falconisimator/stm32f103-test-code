@@ -1,35 +1,6 @@
-13:45:36 **** Incremental Build of configuration Debug for project TestUartPrint ****
+12:55:19 **** Incremental Build of configuration Debug for project TestUARTprint ****
 make -j7 all 
-Building file: ../src/delay.c
-Building file: ../src/lcd16x2.c
-Building file: ../src/main.c
-Invoking: MCU GCC Compiler
-Invoking: MCU GCC Compiler
-Invoking: MCU GCC Compiler
-/Users/ericfalcon/Documents/workspace/stm32f103/TestUartPrint/Debug
-arm-none-eabi-gcc -mcpu=cortex-m3 -mthumb -mfloat-abi=soft -DSTM32 -DSTM32F1 -DSTM32F103RBTx -DNUCLEO_F103RB -DDEBUG -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER -I"/Users/ericfalcon/Documents/workspace/stm32f103/TestUartPrint/Utilities/STM32F1xx-Nucleo" -I"/Users/ericfalcon/Documents/workspace/stm32f103/TestUartPrint/StdPeriph_Driver/inc" -I"/Users/ericfalcon/Documents/workspace/stm32f103/TestUartPrint/inc" -I"/Users/ericfalcon/Documents/workspace/stm32f103/TestUartPrint/CMSIS/device" -I"/Users/ericfalcon/Documents/workspace/stm32f103/TestUartPrint/CMSIS/core" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
-/Users/ericfalcon/Documents/workspace/stm32f103/TestUartPrint/Debug
-arm-none-eabi-gcc -mcpu=cortex-m3 -mthumb -mfloat-abi=soft -DSTM32 -DSTM32F1 -DSTM32F103RBTx -DNUCLEO_F103RB -DDEBUG -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER -I"/Users/ericfalcon/Documents/workspace/stm32f103/TestUartPrint/Utilities/STM32F1xx-Nucleo" -I"/Users/ericfalcon/Documents/workspace/stm32f103/TestUartPrint/StdPeriph_Driver/inc" -I"/Users/ericfalcon/Documents/workspace/stm32f103/TestUartPrint/inc" -I"/Users/ericfalcon/Documents/workspace/stm32f103/TestUartPrint/CMSIS/device" -I"/Users/ericfalcon/Documents/workspace/stm32f103/TestUartPrint/CMSIS/core" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/lcd16x2.d" -MT"src/lcd16x2.o" -o "src/lcd16x2.o" "../src/lcd16x2.c"
-/Users/ericfalcon/Documents/workspace/stm32f103/TestUartPrint/Debug
-arm-none-eabi-gcc -mcpu=cortex-m3 -mthumb -mfloat-abi=soft -DSTM32 -DSTM32F1 -DSTM32F103RBTx -DNUCLEO_F103RB -DDEBUG -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER -I"/Users/ericfalcon/Documents/workspace/stm32f103/TestUartPrint/Utilities/STM32F1xx-Nucleo" -I"/Users/ericfalcon/Documents/workspace/stm32f103/TestUartPrint/StdPeriph_Driver/inc" -I"/Users/ericfalcon/Documents/workspace/stm32f103/TestUartPrint/inc" -I"/Users/ericfalcon/Documents/workspace/stm32f103/TestUartPrint/CMSIS/device" -I"/Users/ericfalcon/Documents/workspace/stm32f103/TestUartPrint/CMSIS/core" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/delay.d" -MT"src/delay.o" -o "src/delay.o" "../src/delay.c"
-Finished building: ../src/lcd16x2.c
-Finished building: ../src/delay.c
-Finished building: ../src/main.c
- 
- 
- 
-Building target: TestUartPrint.elf
-Invoking: MCU GCC Linker
-arm-none-eabi-gcc -mcpu=cortex-m3 -mthumb -mfloat-abi=soft -T"/Users/ericfalcon/Documents/workspace/stm32f103/TestUartPrint/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "TestUartPrint.elf" @"objects.list"   -lm
-Finished building target: TestUartPrint.elf
- 
-/Library/Developer/CommandLineTools/usr/bin/make --no-print-directory post-build
-Generating binary and Printing size information:
-arm-none-eabi-objcopy -O binary "TestUartPrint.elf" "TestUartPrint.bin"
-arm-none-eabi-size "TestUartPrint.elf"
-   text	   data	    bss	    dec	    hex	filename
-   4052	   1104	    340	   5496	   1578	TestUartPrint.elf
- 
+make: Nothing to be done for `all'.
 
-13:45:37 Build Finished (took 717ms)
+12:55:19 Build Finished (took 155ms)
 

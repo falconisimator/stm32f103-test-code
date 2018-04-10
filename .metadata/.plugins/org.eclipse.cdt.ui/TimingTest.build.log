@@ -1,0 +1,6 @@
+10:35:48 **** Incremental Build of configuration Debug for project TimingTest ****
+make -j7 all 
+make: Nothing to be done for `all'.
+
+10:35:49 Build Finished (took 155ms)
+

@@ -1,6 +1,6 @@
-10:55:19 **** Incremental Build of configuration Debug for project 3phasePWM ****
+12:55:15 **** Incremental Build of configuration Debug for project 3phasePWM ****
 make -j7 all 
 make: Nothing to be done for `all'.
 
-10:55:19 Build Finished (took 148ms)
+12:55:16 Build Finished (took 152ms)
 

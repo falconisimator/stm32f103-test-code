@@ -11,6 +11,8 @@
 #include "stm32f10x_conf.h"
 #include "rf_stm32f1_led.h"
 #include "rf_stm32f1_delay.h"
+#include "sinecos.h"
+#include
 
 static void button_setup(void)
 {
@@ -39,12 +41,13 @@ int main(void)
 
     float duty=0.5;
     float step=0.001;
+    int period=500;
 
     while(1)
     {
-	  	delay_us(1000*duty);
+	  	delay_us(period*duty);
         FM_Led_Toggle(LED_1);
-        delay_us(1000-1000*duty);
+        delay_us(period-period*duty);
         FM_Led_Toggle(LED_1);
 
         duty=duty-step;

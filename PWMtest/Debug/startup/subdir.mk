@@ -18,7 +18,7 @@ startup/%.o: ../startup/%.S
 	@echo 'Building file: $<'
 	@echo 'Invoking: MCU GCC Compiler'
 	@echo $(PWD)
-	arm-none-eabi-gcc -mcpu=cortex-m3 -mthumb -mfloat-abi=soft -DSTM32 -DSTM32F1 -DSTM32F103RBTx -DNUCLEO_F103RB -DDEBUG -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER -I"/Users/ericfalcon/Documents/workspace/PWMtest/Utilities/STM32F1xx-Nucleo" -I"/Users/ericfalcon/Documents/workspace/PWMtest/StdPeriph_Driver/inc" -I"/Users/ericfalcon/Documents/workspace/PWMtest/inc" -I"/Users/ericfalcon/Documents/workspace/PWMtest/CMSIS/device" -I"/Users/ericfalcon/Documents/workspace/PWMtest/CMSIS/core" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"$(@:%.o=%.d)" -MT"$@" -o "$@" "$<"
+	arm-none-eabi-gcc -mcpu=cortex-m3 -mthumb -mfloat-abi=soft -DSTM32 -DSTM32F1 -DSTM32F103RBTx -DNUCLEO_F103RB -DDEBUG -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER -I"/Users/ericfalcon/Documents/workspace/stm32f103/PWMtest/Utilities/STM32F1xx-Nucleo" -I"/Users/ericfalcon/Documents/workspace/stm32f103/PWMtest/StdPeriph_Driver/inc" -I"/Users/ericfalcon/Documents/workspace/stm32f103/PWMtest/inc" -I"/Users/ericfalcon/Documents/workspace/stm32f103/PWMtest/CMSIS/device" -I"/Users/ericfalcon/Documents/workspace/stm32f103/PWMtest/CMSIS/core" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"$(@:%.o=%.d)" -MT"$@" -o "$@" "$<"
 	@echo 'Finished building: $<'
 	@echo ' '
 

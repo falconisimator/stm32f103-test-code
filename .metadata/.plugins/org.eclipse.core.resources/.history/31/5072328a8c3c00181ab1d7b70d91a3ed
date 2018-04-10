@@ -1,0 +1,96 @@
+/**
+  ******************************************************************************
+  * @file    main.c
+
+
+  * This code is an adaptation made from code posted on github by RoanFourie.
+  ******************************************************************************
+*/
+
+
+#include "stm32f10x_conf.h"
+#include "rf_stm32f1_led.h"
+#include "rf_stm32f1_delay.h"
+#include "stm32UART.h"
+#include "math.h"
+#include <stdio.h>
+
+
+static void button_setup(void)
+{
+    GPIO_InitTypeDef  GPIO_InitStructure;
+
+	// Clock Enable
+    RCC_APB2PeriphClockCmd(RCC_APB2Periph_GPIOB, ENABLE);
+
+    // Configure as digital input
+    GPIO_InitStructure.GPIO_Pin = GPIO_Pin_15;
+    GPIO_InitStructure.GPIO_Mode = GPIO_Mode_IN_FLOATING;
+    GPIO_InitStructure.GPIO_Speed = GPIO_Speed_2MHz;
+    GPIO_Init(GPIOB, &GPIO_InitStructure);
+}
+
+int main(void)
+{
+    // initialize the system frequency
+    SystemInit();
+    // Delay initialize
+    delay_init();
+    // all LED initialize
+    FM_Led_Init();
+    // Initialize the button
+    button_setup();
+
+    init_USART1(9600); // initialize USART1 @ 9600 baud
+
+    USART_puts(USART1, "Initialize UART complete!\r\n"); // just send a message to indicate that it works
+
+
+    int period=1000;
+    float duty=0;
+
+    char buffer[50]="";
+
+    float t=0;
+    while(1)
+    {
+    	t=t+0.01;
+
+    	duty=0.5*(sin(t)+1);
+
+
+
+
+    	USART_puts(USART1, buffer);
+
+    	if(duty>1)
+    		USART_puts(USART1, "Duty above 1 \r\n");
+    	if(duty<0)
+			USART_puts(USART1, "Duty under 0 \r\n");
+
+    	int t_on=period*duty;
+    	int t_off=period-(period*duty);
+
+    	if (t_on>period)
+    	{
+    		t_on=period-1;
+    		t_off=1;
+    	}
+    	if(t_on<1)
+    	{
+    		t_on=1;
+    		t_off=period-1;
+    	}
+
+    	sprintf(buffer,"T_on = %f \n T_off = %f \n", t_on,t_off);
+
+	  	delay_us(t_on);
+        FM_Led_Toggle(LED_1);
+        delay_us(t_off);
+        FM_Led_Toggle(LED_1);
+
+
+
+
+    }
+}

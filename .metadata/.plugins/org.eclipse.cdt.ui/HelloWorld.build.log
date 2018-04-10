@@ -1,0 +1,195 @@
+12:55:16 **** Build of configuration Debug for project HelloWorld ****
+make -j7 all 
+Building file: ../startup/startup_stm32f10x_md.S
+Building file: ../src/main.c
+Building file: ../src/syscalls.c
+Building file: ../src/system_stm32f10x.c
+Invoking: MCU GCC Compiler
+Building file: ../Utilities/STM32F1xx-Nucleo/stm32f1xx_nucleo.c
+Invoking: MCU GCC Compiler
+Invoking: MCU GCC Compiler
+Invoking: MCU GCC Compiler
+Building file: ../StdPeriph_Driver/src/misc.c
+Invoking: MCU GCC Compiler
+/Users/ericfalcon/Documents/workspace/stm32f103/HelloWorld/Debug
+arm-none-eabi-gcc -mcpu=cortex-m3 -mthumb -mfloat-abi=soft -DSTM32 -DSTM32F1 -DSTM32F103RBTx -DNUCLEO_F103RB -DDEBUG -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER -I"/Users/ericfalcon/Documents/workspace/stm32f103/HelloWorld/Utilities/STM32F1xx-Nucleo" -I"/Users/ericfalcon/Documents/workspace/stm32f103/HelloWorld/StdPeriph_Driver/inc" -I"/Users/ericfalcon/Documents/workspace/stm32f103/HelloWorld/inc" -I"/Users/ericfalcon/Documents/workspace/stm32f103/HelloWorld/CMSIS/device" -I"/Users/ericfalcon/Documents/workspace/stm32f103/HelloWorld/CMSIS/core" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+/Users/ericfalcon/Documents/workspace/stm32f103/HelloWorld/Debug
+/Users/ericfalcon/Documents/workspace/stm32f103/HelloWorld/Debug
+arm-none-eabi-gcc -mcpu=cortex-m3 -mthumb -mfloat-abi=soft -DSTM32 -DSTM32F1 -DSTM32F103RBTx -DNUCLEO_F103RB -DDEBUG -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER -I"/Users/ericfalcon/Documents/workspace/stm32f103/HelloWorld/Utilities/STM32F1xx-Nucleo" -I"/Users/ericfalcon/Documents/workspace/stm32f103/HelloWorld/StdPeriph_Driver/inc" -I"/Users/ericfalcon/Documents/workspace/stm32f103/HelloWorld/inc" -I"/Users/ericfalcon/Documents/workspace/stm32f103/HelloWorld/CMSIS/device" -I"/Users/ericfalcon/Documents/workspace/stm32f103/HelloWorld/CMSIS/core" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"startup/startup_stm32f10x_md.d" -MT"startup/startup_stm32f10x_md.o" -o "startup/startup_stm32f10x_md.o" "../startup/startup_stm32f10x_md.S"
+/Users/ericfalcon/Documents/workspace/stm32f103/HelloWorld/Debug
+Invoking: MCU GCC Compiler
+arm-none-eabi-gcc -mcpu=cortex-m3 -mthumb -mfloat-abi=soft -DSTM32 -DSTM32F1 -DSTM32F103RBTx -DNUCLEO_F103RB -DDEBUG -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER -I"/Users/ericfalcon/Documents/workspace/stm32f103/HelloWorld/Utilities/STM32F1xx-Nucleo" -I"/Users/ericfalcon/Documents/workspace/stm32f103/HelloWorld/StdPeriph_Driver/inc" -I"/Users/ericfalcon/Documents/workspace/stm32f103/HelloWorld/inc" -I"/Users/ericfalcon/Documents/workspace/stm32f103/HelloWorld/CMSIS/device" -I"/Users/ericfalcon/Documents/workspace/stm32f103/HelloWorld/CMSIS/core" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/system_stm32f10x.d" -MT"src/system_stm32f10x.o" -o "src/system_stm32f10x.o" "../src/system_stm32f10x.c"
+/Users/ericfalcon/Documents/workspace/stm32f103/HelloWorld/Debug
+arm-none-eabi-gcc -mcpu=cortex-m3 -mthumb -mfloat-abi=soft -DSTM32 -DSTM32F1 -DSTM32F103RBTx -DNUCLEO_F103RB -DDEBUG -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER -I"/Users/ericfalcon/Documents/workspace/stm32f103/HelloWorld/Utilities/STM32F1xx-Nucleo" -I"/Users/ericfalcon/Documents/workspace/stm32f103/HelloWorld/StdPeriph_Driver/inc" -I"/Users/ericfalcon/Documents/workspace/stm32f103/HelloWorld/inc" -I"/Users/ericfalcon/Documents/workspace/stm32f103/HelloWorld/CMSIS/device" -I"/Users/ericfalcon/Documents/workspace/stm32f103/HelloWorld/CMSIS/core" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"Utilities/STM32F1xx-Nucleo/stm32f1xx_nucleo.d" -MT"Utilities/STM32F1xx-Nucleo/stm32f1xx_nucleo.o" -o "Utilities/STM32F1xx-Nucleo/stm32f1xx_nucleo.o" "../Utilities/STM32F1xx-Nucleo/stm32f1xx_nucleo.c"
+arm-none-eabi-gcc -mcpu=cortex-m3 -mthumb -mfloat-abi=soft -DSTM32 -DSTM32F1 -DSTM32F103RBTx -DNUCLEO_F103RB -DDEBUG -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER -I"/Users/ericfalcon/Documents/workspace/stm32f103/HelloWorld/Utilities/STM32F1xx-Nucleo" -I"/Users/ericfalcon/Documents/workspace/stm32f103/HelloWorld/StdPeriph_Driver/inc" -I"/Users/ericfalcon/Documents/workspace/stm32f103/HelloWorld/inc" -I"/Users/ericfalcon/Documents/workspace/stm32f103/HelloWorld/CMSIS/device" -I"/Users/ericfalcon/Documents/workspace/stm32f103/HelloWorld/CMSIS/core" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/syscalls.d" -MT"src/syscalls.o" -o "src/syscalls.o" "../src/syscalls.c"
+Building file: ../StdPeriph_Driver/src/stm32f10x_adc.c
+/Users/ericfalcon/Documents/workspace/stm32f103/HelloWorld/Debug
+arm-none-eabi-gcc -mcpu=cortex-m3 -mthumb -mfloat-abi=soft -DSTM32 -DSTM32F1 -DSTM32F103RBTx -DNUCLEO_F103RB -DDEBUG -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER -I"/Users/ericfalcon/Documents/workspace/stm32f103/HelloWorld/Utilities/STM32F1xx-Nucleo" -I"/Users/ericfalcon/Documents/workspace/stm32f103/HelloWorld/StdPeriph_Driver/inc" -I"/Users/ericfalcon/Documents/workspace/stm32f103/HelloWorld/inc" -I"/Users/ericfalcon/Documents/workspace/stm32f103/HelloWorld/CMSIS/device" -I"/Users/ericfalcon/Documents/workspace/stm32f103/HelloWorld/CMSIS/core" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"StdPeriph_Driver/src/misc.d" -MT"StdPeriph_Driver/src/misc.o" -o "StdPeriph_Driver/src/misc.o" "../StdPeriph_Driver/src/misc.c"
+Invoking: MCU GCC Compiler
+/Users/ericfalcon/Documents/workspace/stm32f103/HelloWorld/Debug
+arm-none-eabi-gcc -mcpu=cortex-m3 -mthumb -mfloat-abi=soft -DSTM32 -DSTM32F1 -DSTM32F103RBTx -DNUCLEO_F103RB -DDEBUG -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER -I"/Users/ericfalcon/Documents/workspace/stm32f103/HelloWorld/Utilities/STM32F1xx-Nucleo" -I"/Users/ericfalcon/Documents/workspace/stm32f103/HelloWorld/StdPeriph_Driver/inc" -I"/Users/ericfalcon/Documents/workspace/stm32f103/HelloWorld/inc" -I"/Users/ericfalcon/Documents/workspace/stm32f103/HelloWorld/CMSIS/device" -I"/Users/ericfalcon/Documents/workspace/stm32f103/HelloWorld/CMSIS/core" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"StdPeriph_Driver/src/stm32f10x_adc.d" -MT"StdPeriph_Driver/src/stm32f10x_adc.o" -o "StdPeriph_Driver/src/stm32f10x_adc.o" "../StdPeriph_Driver/src/stm32f10x_adc.c"
+Finished building: ../startup/startup_stm32f10x_md.S
+ 
+Building file: ../StdPeriph_Driver/src/stm32f10x_bkp.c
+Invoking: MCU GCC Compiler
+/Users/ericfalcon/Documents/workspace/stm32f103/HelloWorld/Debug
+arm-none-eabi-gcc -mcpu=cortex-m3 -mthumb -mfloat-abi=soft -DSTM32 -DSTM32F1 -DSTM32F103RBTx -DNUCLEO_F103RB -DDEBUG -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER -I"/Users/ericfalcon/Documents/workspace/stm32f103/HelloWorld/Utilities/STM32F1xx-Nucleo" -I"/Users/ericfalcon/Documents/workspace/stm32f103/HelloWorld/StdPeriph_Driver/inc" -I"/Users/ericfalcon/Documents/workspace/stm32f103/HelloWorld/inc" -I"/Users/ericfalcon/Documents/workspace/stm32f103/HelloWorld/CMSIS/device" -I"/Users/ericfalcon/Documents/workspace/stm32f103/HelloWorld/CMSIS/core" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"StdPeriph_Driver/src/stm32f10x_bkp.d" -MT"StdPeriph_Driver/src/stm32f10x_bkp.o" -o "StdPeriph_Driver/src/stm32f10x_bkp.o" "../StdPeriph_Driver/src/stm32f10x_bkp.c"
+../src/main.c:17:1: warning: "/*" within comment [-Wcomment]
+ /*
+  
+../src/system_stm32f10x.c: In function 'SetSysClock':
+../src/system_stm32f10x.c:284:37: warning: unused variable 'HSEStatus' [-Wunused-variable]
+   __IO uint32_t StartUpCounter = 0, HSEStatus = 0;
+                                     ^~~~~~~~~
+../src/system_stm32f10x.c:284:17: warning: unused variable 'StartUpCounter' [-Wunused-variable]
+   __IO uint32_t StartUpCounter = 0, HSEStatus = 0;
+                 ^~~~~~~~~~~~~~
+Finished building: ../src/syscalls.c
+ 
+Building file: ../StdPeriph_Driver/src/stm32f10x_can.c
+Invoking: MCU GCC Compiler
+/Users/ericfalcon/Documents/workspace/stm32f103/HelloWorld/Debug
+arm-none-eabi-gcc -mcpu=cortex-m3 -mthumb -mfloat-abi=soft -DSTM32 -DSTM32F1 -DSTM32F103RBTx -DNUCLEO_F103RB -DDEBUG -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER -I"/Users/ericfalcon/Documents/workspace/stm32f103/HelloWorld/Utilities/STM32F1xx-Nucleo" -I"/Users/ericfalcon/Documents/workspace/stm32f103/HelloWorld/StdPeriph_Driver/inc" -I"/Users/ericfalcon/Documents/workspace/stm32f103/HelloWorld/inc" -I"/Users/ericfalcon/Documents/workspace/stm32f103/HelloWorld/CMSIS/device" -I"/Users/ericfalcon/Documents/workspace/stm32f103/HelloWorld/CMSIS/core" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"StdPeriph_Driver/src/stm32f10x_can.d" -MT"StdPeriph_Driver/src/stm32f10x_can.o" -o "StdPeriph_Driver/src/stm32f10x_can.o" "../StdPeriph_Driver/src/stm32f10x_can.c"
+Finished building: ../src/main.c
+Finished building: ../StdPeriph_Driver/src/misc.c
+ 
+ 
+Finished building: ../src/system_stm32f10x.c
+Building file: ../StdPeriph_Driver/src/stm32f10x_cec.c
+ 
+Invoking: MCU GCC Compiler
+Finished building: ../Utilities/STM32F1xx-Nucleo/stm32f1xx_nucleo.c
+/Users/ericfalcon/Documents/workspace/stm32f103/HelloWorld/Debug
+arm-none-eabi-gcc -mcpu=cortex-m3 -mthumb -mfloat-abi=soft -DSTM32 -DSTM32F1 -DSTM32F103RBTx -DNUCLEO_F103RB -DDEBUG -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER -I"/Users/ericfalcon/Documents/workspace/stm32f103/HelloWorld/Utilities/STM32F1xx-Nucleo" -I"/Users/ericfalcon/Documents/workspace/stm32f103/HelloWorld/StdPeriph_Driver/inc" -I"/Users/ericfalcon/Documents/workspace/stm32f103/HelloWorld/inc" -I"/Users/ericfalcon/Documents/workspace/stm32f103/HelloWorld/CMSIS/device" -I"/Users/ericfalcon/Documents/workspace/stm32f103/HelloWorld/CMSIS/core" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"StdPeriph_Driver/src/stm32f10x_cec.d" -MT"StdPeriph_Driver/src/stm32f10x_cec.o" -o "StdPeriph_Driver/src/stm32f10x_cec.o" "../StdPeriph_Driver/src/stm32f10x_cec.c"
+ 
+Building file: ../StdPeriph_Driver/src/stm32f10x_crc.c
+Finished building: ../StdPeriph_Driver/src/stm32f10x_bkp.c
+Invoking: MCU GCC Compiler
+ 
+/Users/ericfalcon/Documents/workspace/stm32f103/HelloWorld/Debug
+arm-none-eabi-gcc -mcpu=cortex-m3 -mthumb -mfloat-abi=soft -DSTM32 -DSTM32F1 -DSTM32F103RBTx -DNUCLEO_F103RB -DDEBUG -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER -I"/Users/ericfalcon/Documents/workspace/stm32f103/HelloWorld/Utilities/STM32F1xx-Nucleo" -I"/Users/ericfalcon/Documents/workspace/stm32f103/HelloWorld/StdPeriph_Driver/inc" -I"/Users/ericfalcon/Documents/workspace/stm32f103/HelloWorld/inc" -I"/Users/ericfalcon/Documents/workspace/stm32f103/HelloWorld/CMSIS/device" -I"/Users/ericfalcon/Documents/workspace/stm32f103/HelloWorld/CMSIS/core" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"StdPeriph_Driver/src/stm32f10x_crc.d" -MT"StdPeriph_Driver/src/stm32f10x_crc.o" -o "StdPeriph_Driver/src/stm32f10x_crc.o" "../StdPeriph_Driver/src/stm32f10x_crc.c"
+Finished building: ../StdPeriph_Driver/src/stm32f10x_adc.c
+Building file: ../StdPeriph_Driver/src/stm32f10x_dac.c
+ 
+Invoking: MCU GCC Compiler
+Building file: ../StdPeriph_Driver/src/stm32f10x_dbgmcu.c
+/Users/ericfalcon/Documents/workspace/stm32f103/HelloWorld/Debug
+Invoking: MCU GCC Compiler
+arm-none-eabi-gcc -mcpu=cortex-m3 -mthumb -mfloat-abi=soft -DSTM32 -DSTM32F1 -DSTM32F103RBTx -DNUCLEO_F103RB -DDEBUG -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER -I"/Users/ericfalcon/Documents/workspace/stm32f103/HelloWorld/Utilities/STM32F1xx-Nucleo" -I"/Users/ericfalcon/Documents/workspace/stm32f103/HelloWorld/StdPeriph_Driver/inc" -I"/Users/ericfalcon/Documents/workspace/stm32f103/HelloWorld/inc" -I"/Users/ericfalcon/Documents/workspace/stm32f103/HelloWorld/CMSIS/device" -I"/Users/ericfalcon/Documents/workspace/stm32f103/HelloWorld/CMSIS/core" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"StdPeriph_Driver/src/stm32f10x_dac.d" -MT"StdPeriph_Driver/src/stm32f10x_dac.o" -o "StdPeriph_Driver/src/stm32f10x_dac.o" "../StdPeriph_Driver/src/stm32f10x_dac.c"
+Building file: ../StdPeriph_Driver/src/stm32f10x_dma.c
+/Users/ericfalcon/Documents/workspace/stm32f103/HelloWorld/Debug
+arm-none-eabi-gcc -mcpu=cortex-m3 -mthumb -mfloat-abi=soft -DSTM32 -DSTM32F1 -DSTM32F103RBTx -DNUCLEO_F103RB -DDEBUG -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER -I"/Users/ericfalcon/Documents/workspace/stm32f103/HelloWorld/Utilities/STM32F1xx-Nucleo" -I"/Users/ericfalcon/Documents/workspace/stm32f103/HelloWorld/StdPeriph_Driver/inc" -I"/Users/ericfalcon/Documents/workspace/stm32f103/HelloWorld/inc" -I"/Users/ericfalcon/Documents/workspace/stm32f103/HelloWorld/CMSIS/device" -I"/Users/ericfalcon/Documents/workspace/stm32f103/HelloWorld/CMSIS/core" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"StdPeriph_Driver/src/stm32f10x_dbgmcu.d" -MT"StdPeriph_Driver/src/stm32f10x_dbgmcu.o" -o "StdPeriph_Driver/src/stm32f10x_dbgmcu.o" "../StdPeriph_Driver/src/stm32f10x_dbgmcu.c"
+Invoking: MCU GCC Compiler
+Building file: ../StdPeriph_Driver/src/stm32f10x_exti.c
+Invoking: MCU GCC Compiler
+/Users/ericfalcon/Documents/workspace/stm32f103/HelloWorld/Debug
+arm-none-eabi-gcc -mcpu=cortex-m3 -mthumb -mfloat-abi=soft -DSTM32 -DSTM32F1 -DSTM32F103RBTx -DNUCLEO_F103RB -DDEBUG -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER -I"/Users/ericfalcon/Documents/workspace/stm32f103/HelloWorld/Utilities/STM32F1xx-Nucleo" -I"/Users/ericfalcon/Documents/workspace/stm32f103/HelloWorld/StdPeriph_Driver/inc" -I"/Users/ericfalcon/Documents/workspace/stm32f103/HelloWorld/inc" -I"/Users/ericfalcon/Documents/workspace/stm32f103/HelloWorld/CMSIS/device" -I"/Users/ericfalcon/Documents/workspace/stm32f103/HelloWorld/CMSIS/core" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"StdPeriph_Driver/src/stm32f10x_dma.d" -MT"StdPeriph_Driver/src/stm32f10x_dma.o" -o "StdPeriph_Driver/src/stm32f10x_dma.o" "../StdPeriph_Driver/src/stm32f10x_dma.c"
+/Users/ericfalcon/Documents/workspace/stm32f103/HelloWorld/Debug
+arm-none-eabi-gcc -mcpu=cortex-m3 -mthumb -mfloat-abi=soft -DSTM32 -DSTM32F1 -DSTM32F103RBTx -DNUCLEO_F103RB -DDEBUG -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER -I"/Users/ericfalcon/Documents/workspace/stm32f103/HelloWorld/Utilities/STM32F1xx-Nucleo" -I"/Users/ericfalcon/Documents/workspace/stm32f103/HelloWorld/StdPeriph_Driver/inc" -I"/Users/ericfalcon/Documents/workspace/stm32f103/HelloWorld/inc" -I"/Users/ericfalcon/Documents/workspace/stm32f103/HelloWorld/CMSIS/device" -I"/Users/ericfalcon/Documents/workspace/stm32f103/HelloWorld/CMSIS/core" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"StdPeriph_Driver/src/stm32f10x_exti.d" -MT"StdPeriph_Driver/src/stm32f10x_exti.o" -o "StdPeriph_Driver/src/stm32f10x_exti.o" "../StdPeriph_Driver/src/stm32f10x_exti.c"
+Finished building: ../StdPeriph_Driver/src/stm32f10x_can.c
+ 
+Building file: ../StdPeriph_Driver/src/stm32f10x_flash.c
+Invoking: MCU GCC Compiler
+/Users/ericfalcon/Documents/workspace/stm32f103/HelloWorld/Debug
+arm-none-eabi-gcc -mcpu=cortex-m3 -mthumb -mfloat-abi=soft -DSTM32 -DSTM32F1 -DSTM32F103RBTx -DNUCLEO_F103RB -DDEBUG -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER -I"/Users/ericfalcon/Documents/workspace/stm32f103/HelloWorld/Utilities/STM32F1xx-Nucleo" -I"/Users/ericfalcon/Documents/workspace/stm32f103/HelloWorld/StdPeriph_Driver/inc" -I"/Users/ericfalcon/Documents/workspace/stm32f103/HelloWorld/inc" -I"/Users/ericfalcon/Documents/workspace/stm32f103/HelloWorld/CMSIS/device" -I"/Users/ericfalcon/Documents/workspace/stm32f103/HelloWorld/CMSIS/core" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"StdPeriph_Driver/src/stm32f10x_flash.d" -MT"StdPeriph_Driver/src/stm32f10x_flash.o" -o "StdPeriph_Driver/src/stm32f10x_flash.o" "../StdPeriph_Driver/src/stm32f10x_flash.c"
+Finished building: ../StdPeriph_Driver/src/stm32f10x_cec.c
+Finished building: ../StdPeriph_Driver/src/stm32f10x_crc.c
+ 
+ 
+Building file: ../StdPeriph_Driver/src/stm32f10x_fsmc.c
+Building file: ../StdPeriph_Driver/src/stm32f10x_gpio.c
+Invoking: MCU GCC Compiler
+Invoking: MCU GCC Compiler
+/Users/ericfalcon/Documents/workspace/stm32f103/HelloWorld/Debug
+arm-none-eabi-gcc -mcpu=cortex-m3 -mthumb -mfloat-abi=soft -DSTM32 -DSTM32F1 -DSTM32F103RBTx -DNUCLEO_F103RB -DDEBUG -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER -I"/Users/ericfalcon/Documents/workspace/stm32f103/HelloWorld/Utilities/STM32F1xx-Nucleo" -I"/Users/ericfalcon/Documents/workspace/stm32f103/HelloWorld/StdPeriph_Driver/inc" -I"/Users/ericfalcon/Documents/workspace/stm32f103/HelloWorld/inc" -I"/Users/ericfalcon/Documents/workspace/stm32f103/HelloWorld/CMSIS/device" -I"/Users/ericfalcon/Documents/workspace/stm32f103/HelloWorld/CMSIS/core" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"StdPeriph_Driver/src/stm32f10x_fsmc.d" -MT"StdPeriph_Driver/src/stm32f10x_fsmc.o" -o "StdPeriph_Driver/src/stm32f10x_fsmc.o" "../StdPeriph_Driver/src/stm32f10x_fsmc.c"
+/Users/ericfalcon/Documents/workspace/stm32f103/HelloWorld/Debug
+arm-none-eabi-gcc -mcpu=cortex-m3 -mthumb -mfloat-abi=soft -DSTM32 -DSTM32F1 -DSTM32F103RBTx -DNUCLEO_F103RB -DDEBUG -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER -I"/Users/ericfalcon/Documents/workspace/stm32f103/HelloWorld/Utilities/STM32F1xx-Nucleo" -I"/Users/ericfalcon/Documents/workspace/stm32f103/HelloWorld/StdPeriph_Driver/inc" -I"/Users/ericfalcon/Documents/workspace/stm32f103/HelloWorld/inc" -I"/Users/ericfalcon/Documents/workspace/stm32f103/HelloWorld/CMSIS/device" -I"/Users/ericfalcon/Documents/workspace/stm32f103/HelloWorld/CMSIS/core" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"StdPeriph_Driver/src/stm32f10x_gpio.d" -MT"StdPeriph_Driver/src/stm32f10x_gpio.o" -o "StdPeriph_Driver/src/stm32f10x_gpio.o" "../StdPeriph_Driver/src/stm32f10x_gpio.c"
+Finished building: ../StdPeriph_Driver/src/stm32f10x_exti.c
+ 
+Finished building: ../StdPeriph_Driver/src/stm32f10x_dbgmcu.c
+Finished building: ../StdPeriph_Driver/src/stm32f10x_dac.c
+ 
+ 
+Building file: ../StdPeriph_Driver/src/stm32f10x_i2c.c
+Building file: ../StdPeriph_Driver/src/stm32f10x_iwdg.c
+Invoking: MCU GCC Compiler
+Invoking: MCU GCC Compiler
+/Users/ericfalcon/Documents/workspace/stm32f103/HelloWorld/Debug
+arm-none-eabi-gcc -mcpu=cortex-m3 -mthumb -mfloat-abi=soft -DSTM32 -DSTM32F1 -DSTM32F103RBTx -DNUCLEO_F103RB -DDEBUG -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER -I"/Users/ericfalcon/Documents/workspace/stm32f103/HelloWorld/Utilities/STM32F1xx-Nucleo" -I"/Users/ericfalcon/Documents/workspace/stm32f103/HelloWorld/StdPeriph_Driver/inc" -I"/Users/ericfalcon/Documents/workspace/stm32f103/HelloWorld/inc" -I"/Users/ericfalcon/Documents/workspace/stm32f103/HelloWorld/CMSIS/device" -I"/Users/ericfalcon/Documents/workspace/stm32f103/HelloWorld/CMSIS/core" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"StdPeriph_Driver/src/stm32f10x_i2c.d" -MT"StdPeriph_Driver/src/stm32f10x_i2c.o" -o "StdPeriph_Driver/src/stm32f10x_i2c.o" "../StdPeriph_Driver/src/stm32f10x_i2c.c"
+/Users/ericfalcon/Documents/workspace/stm32f103/HelloWorld/Debug
+arm-none-eabi-gcc -mcpu=cortex-m3 -mthumb -mfloat-abi=soft -DSTM32 -DSTM32F1 -DSTM32F103RBTx -DNUCLEO_F103RB -DDEBUG -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER -I"/Users/ericfalcon/Documents/workspace/stm32f103/HelloWorld/Utilities/STM32F1xx-Nucleo" -I"/Users/ericfalcon/Documents/workspace/stm32f103/HelloWorld/StdPeriph_Driver/inc" -I"/Users/ericfalcon/Documents/workspace/stm32f103/HelloWorld/inc" -I"/Users/ericfalcon/Documents/workspace/stm32f103/HelloWorld/CMSIS/device" -I"/Users/ericfalcon/Documents/workspace/stm32f103/HelloWorld/CMSIS/core" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"StdPeriph_Driver/src/stm32f10x_iwdg.d" -MT"StdPeriph_Driver/src/stm32f10x_iwdg.o" -o "StdPeriph_Driver/src/stm32f10x_iwdg.o" "../StdPeriph_Driver/src/stm32f10x_iwdg.c"
+Building file: ../StdPeriph_Driver/src/stm32f10x_pwr.c
+Invoking: MCU GCC Compiler
+/Users/ericfalcon/Documents/workspace/stm32f103/HelloWorld/Debug
+arm-none-eabi-gcc -mcpu=cortex-m3 -mthumb -mfloat-abi=soft -DSTM32 -DSTM32F1 -DSTM32F103RBTx -DNUCLEO_F103RB -DDEBUG -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER -I"/Users/ericfalcon/Documents/workspace/stm32f103/HelloWorld/Utilities/STM32F1xx-Nucleo" -I"/Users/ericfalcon/Documents/workspace/stm32f103/HelloWorld/StdPeriph_Driver/inc" -I"/Users/ericfalcon/Documents/workspace/stm32f103/HelloWorld/inc" -I"/Users/ericfalcon/Documents/workspace/stm32f103/HelloWorld/CMSIS/device" -I"/Users/ericfalcon/Documents/workspace/stm32f103/HelloWorld/CMSIS/core" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"StdPeriph_Driver/src/stm32f10x_pwr.d" -MT"StdPeriph_Driver/src/stm32f10x_pwr.o" -o "StdPeriph_Driver/src/stm32f10x_pwr.o" "../StdPeriph_Driver/src/stm32f10x_pwr.c"
+Finished building: ../StdPeriph_Driver/src/stm32f10x_dma.c
+ 
+Building file: ../StdPeriph_Driver/src/stm32f10x_rcc.c
+Invoking: MCU GCC Compiler
+/Users/ericfalcon/Documents/workspace/stm32f103/HelloWorld/Debug
+arm-none-eabi-gcc -mcpu=cortex-m3 -mthumb -mfloat-abi=soft -DSTM32 -DSTM32F1 -DSTM32F103RBTx -DNUCLEO_F103RB -DDEBUG -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER -I"/Users/ericfalcon/Documents/workspace/stm32f103/HelloWorld/Utilities/STM32F1xx-Nucleo" -I"/Users/ericfalcon/Documents/workspace/stm32f103/HelloWorld/StdPeriph_Driver/inc" -I"/Users/ericfalcon/Documents/workspace/stm32f103/HelloWorld/inc" -I"/Users/ericfalcon/Documents/workspace/stm32f103/HelloWorld/CMSIS/device" -I"/Users/ericfalcon/Documents/workspace/stm32f103/HelloWorld/CMSIS/core" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"StdPeriph_Driver/src/stm32f10x_rcc.d" -MT"StdPeriph_Driver/src/stm32f10x_rcc.o" -o "StdPeriph_Driver/src/stm32f10x_rcc.o" "../StdPeriph_Driver/src/stm32f10x_rcc.c"
+Finished building: ../StdPeriph_Driver/src/stm32f10x_flash.c
+ 
+Building file: ../StdPeriph_Driver/src/stm32f10x_rtc.c
+Invoking: MCU GCC Compiler
+Finished building: ../StdPeriph_Driver/src/stm32f10x_gpio.c
+/Users/ericfalcon/Documents/workspace/stm32f103/HelloWorld/Debug
+arm-none-eabi-gcc -mcpu=cortex-m3 -mthumb -mfloat-abi=soft -DSTM32 -DSTM32F1 -DSTM32F103RBTx -DNUCLEO_F103RB -DDEBUG -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER -I"/Users/ericfalcon/Documents/workspace/stm32f103/HelloWorld/Utilities/STM32F1xx-Nucleo" -I"/Users/ericfalcon/Documents/workspace/stm32f103/HelloWorld/StdPeriph_Driver/inc" -I"/Users/ericfalcon/Documents/workspace/stm32f103/HelloWorld/inc" -I"/Users/ericfalcon/Documents/workspace/stm32f103/HelloWorld/CMSIS/device" -I"/Users/ericfalcon/Documents/workspace/stm32f103/HelloWorld/CMSIS/core" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"StdPeriph_Driver/src/stm32f10x_rtc.d" -MT"StdPeriph_Driver/src/stm32f10x_rtc.o" -o "StdPeriph_Driver/src/stm32f10x_rtc.o" "../StdPeriph_Driver/src/stm32f10x_rtc.c"
+ 
+Building file: ../StdPeriph_Driver/src/stm32f10x_sdio.c
+Finished building: ../StdPeriph_Driver/src/stm32f10x_fsmc.c
+Invoking: MCU GCC Compiler
+ 
+/Users/ericfalcon/Documents/workspace/stm32f103/HelloWorld/Debug
+arm-none-eabi-gcc -mcpu=cortex-m3 -mthumb -mfloat-abi=soft -DSTM32 -DSTM32F1 -DSTM32F103RBTx -DNUCLEO_F103RB -DDEBUG -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER -I"/Users/ericfalcon/Documents/workspace/stm32f103/HelloWorld/Utilities/STM32F1xx-Nucleo" -I"/Users/ericfalcon/Documents/workspace/stm32f103/HelloWorld/StdPeriph_Driver/inc" -I"/Users/ericfalcon/Documents/workspace/stm32f103/HelloWorld/inc" -I"/Users/ericfalcon/Documents/workspace/stm32f103/HelloWorld/CMSIS/device" -I"/Users/ericfalcon/Documents/workspace/stm32f103/HelloWorld/CMSIS/core" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"StdPeriph_Driver/src/stm32f10x_sdio.d" -MT"StdPeriph_Driver/src/stm32f10x_sdio.o" -o "StdPeriph_Driver/src/stm32f10x_sdio.o" "../StdPeriph_Driver/src/stm32f10x_sdio.c"
+Building file: ../StdPeriph_Driver/src/stm32f10x_spi.c
+Finished building: ../StdPeriph_Driver/src/stm32f10x_iwdg.c
+Invoking: MCU GCC Compiler
+ 
+/Users/ericfalcon/Documents/workspace/stm32f103/HelloWorld/Debug
+arm-none-eabi-gcc -mcpu=cortex-m3 -mthumb -mfloat-abi=soft -DSTM32 -DSTM32F1 -DSTM32F103RBTx -DNUCLEO_F103RB -DDEBUG -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER -I"/Users/ericfalcon/Documents/workspace/stm32f103/HelloWorld/Utilities/STM32F1xx-Nucleo" -I"/Users/ericfalcon/Documents/workspace/stm32f103/HelloWorld/StdPeriph_Driver/inc" -I"/Users/ericfalcon/Documents/workspace/stm32f103/HelloWorld/inc" -I"/Users/ericfalcon/Documents/workspace/stm32f103/HelloWorld/CMSIS/device" -I"/Users/ericfalcon/Documents/workspace/stm32f103/HelloWorld/CMSIS/core" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"StdPeriph_Driver/src/stm32f10x_spi.d" -MT"StdPeriph_Driver/src/stm32f10x_spi.o" -o "StdPeriph_Driver/src/stm32f10x_spi.o" "../StdPeriph_Driver/src/stm32f10x_spi.c"
+Finished building: ../StdPeriph_Driver/src/stm32f10x_pwr.c
+Building file: ../StdPeriph_Driver/src/stm32f10x_tim.c
+ 
+Invoking: MCU GCC Compiler
+Building file: ../StdPeriph_Driver/src/stm32f10x_usart.c
+/Users/ericfalcon/Documents/workspace/stm32f103/HelloWorld/Debug
+arm-none-eabi-gcc -mcpu=cortex-m3 -mthumb -mfloat-abi=soft -DSTM32 -DSTM32F1 -DSTM32F103RBTx -DNUCLEO_F103RB -DDEBUG -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER -I"/Users/ericfalcon/Documents/workspace/stm32f103/HelloWorld/Utilities/STM32F1xx-Nucleo" -I"/Users/ericfalcon/Documents/workspace/stm32f103/HelloWorld/StdPeriph_Driver/inc" -I"/Users/ericfalcon/Documents/workspace/stm32f103/HelloWorld/inc" -I"/Users/ericfalcon/Documents/workspace/stm32f103/HelloWorld/CMSIS/device" -I"/Users/ericfalcon/Documents/workspace/stm32f103/HelloWorld/CMSIS/core" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"StdPeriph_Driver/src/stm32f10x_tim.d" -MT"StdPeriph_Driver/src/stm32f10x_tim.o" -o "StdPeriph_Driver/src/stm32f10x_tim.o" "../StdPeriph_Driver/src/stm32f10x_tim.c"
+Invoking: MCU GCC Compiler
+/Users/ericfalcon/Documents/workspace/stm32f103/HelloWorld/Debug
+arm-none-eabi-gcc -mcpu=cortex-m3 -mthumb -mfloat-abi=soft -DSTM32 -DSTM32F1 -DSTM32F103RBTx -DNUCLEO_F103RB -DDEBUG -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER -I"/Users/ericfalcon/Documents/workspace/stm32f103/HelloWorld/Utilities/STM32F1xx-Nucleo" -I"/Users/ericfalcon/Documents/workspace/stm32f103/HelloWorld/StdPeriph_Driver/inc" -I"/Users/ericfalcon/Documents/workspace/stm32f103/HelloWorld/inc" -I"/Users/ericfalcon/Documents/workspace/stm32f103/HelloWorld/CMSIS/device" -I"/Users/ericfalcon/Documents/workspace/stm32f103/HelloWorld/CMSIS/core" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"StdPeriph_Driver/src/stm32f10x_usart.d" -MT"StdPeriph_Driver/src/stm32f10x_usart.o" -o "StdPeriph_Driver/src/stm32f10x_usart.o" "../StdPeriph_Driver/src/stm32f10x_usart.c"
+Finished building: ../StdPeriph_Driver/src/stm32f10x_i2c.c
+ 
+Building file: ../StdPeriph_Driver/src/stm32f10x_wwdg.c
+Invoking: MCU GCC Compiler
+/Users/ericfalcon/Documents/workspace/stm32f103/HelloWorld/Debug
+Finished building: ../StdPeriph_Driver/src/stm32f10x_rcc.c
+arm-none-eabi-gcc -mcpu=cortex-m3 -mthumb -mfloat-abi=soft -DSTM32 -DSTM32F1 -DSTM32F103RBTx -DNUCLEO_F103RB -DDEBUG -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER -I"/Users/ericfalcon/Documents/workspace/stm32f103/HelloWorld/Utilities/STM32F1xx-Nucleo" -I"/Users/ericfalcon/Documents/workspace/stm32f103/HelloWorld/StdPeriph_Driver/inc" -I"/Users/ericfalcon/Documents/workspace/stm32f103/HelloWorld/inc" -I"/Users/ericfalcon/Documents/workspace/stm32f103/HelloWorld/CMSIS/device" -I"/Users/ericfalcon/Documents/workspace/stm32f103/HelloWorld/CMSIS/core" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"StdPeriph_Driver/src/stm32f10x_wwdg.d" -MT"StdPeriph_Driver/src/stm32f10x_wwdg.o" -o "StdPeriph_Driver/src/stm32f10x_wwdg.o" "../StdPeriph_Driver/src/stm32f10x_wwdg.c"
+ 
+Finished building: ../StdPeriph_Driver/src/stm32f10x_rtc.c
+ 
+Finished building: ../StdPeriph_Driver/src/stm32f10x_sdio.c
+ 
+Finished building: ../StdPeriph_Driver/src/stm32f10x_spi.c
+ 
+Finished building: ../StdPeriph_Driver/src/stm32f10x_wwdg.c
+ 
+Finished building: ../StdPeriph_Driver/src/stm32f10x_usart.c
+ 
+Finished building: ../StdPeriph_Driver/src/stm32f10x_tim.c
+ 
+Building target: HelloWorld.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m3 -mthumb -mfloat-abi=soft -T"/Users/ericfalcon/Documents/workspace/stm32f103/HelloWorld/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "HelloWorld.elf" @"objects.list"   -lm
+Finished building target: HelloWorld.elf
+ 
+/Library/Developer/CommandLineTools/usr/bin/make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "HelloWorld.elf" "HelloWorld.bin"
+arm-none-eabi-size "HelloWorld.elf"
+   text	   data	    bss	    dec	    hex	filename
+   1268	   1080	    324	   2672	    a70	HelloWorld.elf
+ 
+
+12:55:18 Build Finished (took 1s.673ms)
+

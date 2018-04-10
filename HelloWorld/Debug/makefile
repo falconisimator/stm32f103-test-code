@@ -32,10 +32,10 @@ endif
 all: HelloWorld.elf
 
 # Tool invocations
-HelloWorld.elf: $(OBJS) $(USER_OBJS) /Users/ericfalcon/Documents/workspace/HelloWorld/LinkerScript.ld
+HelloWorld.elf: $(OBJS) $(USER_OBJS) /Users/ericfalcon/Documents/workspace/stm32f103/HelloWorld/LinkerScript.ld
 	@echo 'Building target: $@'
 	@echo 'Invoking: MCU GCC Linker'
-	arm-none-eabi-gcc -mcpu=cortex-m3 -mthumb -mfloat-abi=soft -T"/Users/ericfalcon/Documents/workspace/HelloWorld/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "HelloWorld.elf" @"objects.list" $(USER_OBJS) $(LIBS) -lm
+	arm-none-eabi-gcc -mcpu=cortex-m3 -mthumb -mfloat-abi=soft -T"/Users/ericfalcon/Documents/workspace/stm32f103/HelloWorld/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "HelloWorld.elf" @"objects.list" $(USER_OBJS) $(LIBS) -lm
 	@echo 'Finished building target: $@'
 	@echo ' '
 	$(MAKE) --no-print-directory post-build

@@ -1,0 +1,6 @@
+#include "stm32f10x.h"
+
+void Delay(__IO uint32_t);
+void init_USART1(uint32_t);
+void USART_puts(USART_TypeDef*, volatile char );
+void USART1_IRQHandler(void);
